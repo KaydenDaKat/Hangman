@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    tools:context=".MainActivity">
+    tools:context=".StartingMenu">
 
     <Button
         android:id="@+id/button_singleplayer_startmenu"
@@ -15,7 +15,8 @@
         android:layout_marginTop="92dp"
         android:layout_marginEnd="145dp"
         android:text="Single Player"
-        android:background="@color/colorAccent"
+        android:background="@color/colorPrimaryDark"
+        android:fontFamily="sans-serif-condensed"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,22 +30,25 @@
         android:layout_marginTop="139dp"
         android:layout_marginEnd="145dp"
         android:text="Duo"
-        android:background="@color/colorAccent"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:background="@drawable/squircle"
+        android:fontFamily="sans-serif-condensed"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_singleplayer_startmenu" />
 
     <TextView
         android:id="@+id/textView_title_startmenu"
-        android:layout_width="240dp"
-        android:layout_height="103dp"
+        android:layout_width="290dp"
+        android:layout_height="99dp"
         android:layout_marginStart="85dp"
-        android:layout_marginTop="31dp"
+        android:layout_marginTop="48dp"
         android:layout_marginEnd="86dp"
+        android:fontFamily="cursive"
         android:gravity="center"
         android:text="Kaydong's Hangman"
-        android:textColor="@color/colorAccent"
-        android:textSize="30sp"
+        android:textColor="@color/darkText"
+        android:textSize="36sp"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

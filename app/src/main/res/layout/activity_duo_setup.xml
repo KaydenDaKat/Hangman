@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".DuoSetup">
+
+    <TextView
+        android:id="@+id/textview_title_duosetup"
+        android:layout_width="290dp"
+        android:layout_height="99dp"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="86dp"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+        android:text="Duo Setup"
+        android:textColor="@color/darkText"
+        android:textSize="36sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_start_duosetup"
+        android:layout_width="121dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="128dp"
+        android:background="@color/colorPrimaryDark"
+        android:fontFamily="sans-serif-condensed"
+        android:text="START"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edittext_wordinsert_duosetup" />
+
+    <EditText
+        android:id="@+id/edittext_wordinsert_duosetup"
+        android:layout_width="250dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="100dp"
+        android:background="@color/colorAccent"
+        android:contentDescription="Insert Word"
+        android:ems="10"
+        android:hint="Insert Word"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_title_duosetup" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

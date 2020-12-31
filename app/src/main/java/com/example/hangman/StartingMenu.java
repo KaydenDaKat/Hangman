@@ -2,12 +2,13 @@ package com.example.hangman;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class StartingMenu extends AppCompatActivity {
 
     private TextView titleTextView;
     private Button singlePlayerButton, duoButton;
@@ -16,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.starting_menu);
 
         wireWidgets();
 
@@ -36,14 +37,18 @@ public class MainActivity extends AppCompatActivity {
         singlePlayerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent targetIntent = new Intent(StartingMenu.this, SinglePlayerSetup.class);
+                startActivity(targetIntent);
+                finish();
             }
         });
 
         duoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                
+                Intent targetIntent = new Intent(StartingMenu.this, DuoSetup.class);
+                startActivity(targetIntent);
+                finish();
             }
         });
     }
