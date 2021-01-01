@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".Game">
+
+    <ImageView
+        android:id="@+id/imageView_display_game"
+        android:layout_width="224dp"
+        android:layout_height="314dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.818"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/textView_lettersU_game"
+        android:layout_width="141dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/rectangle_border"
+        android:gravity="center"
+        android:text="Letters Used"
+        android:textColor="@color/darkText"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView_lettersR_game"
+        app:layout_constraintTop_toBottomOf="@+id/textView_letterscorrect_game" />
+
+    <Button
+        android:id="@+id/button_enter_game"
+        android:layout_width="121dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="52dp"
+        android:background="@color/colorAccent"
+        android:fontFamily="sans-serif-condensed"
+        android:text="ENTER"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_lettersused_game" />
+
+    <EditText
+        android:id="@+id/editText_insertletter_game"
+        android:layout_width="76dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Insert Letter"
+        android:inputType="textPersonName"
+        android:textSize="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_lettersremaining_game" />
+
+    <TextView
+        android:id="@+id/textView_lettersremaining_game"
+        android:layout_width="169dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rectangle_border"
+        android:gravity="center
+"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_lettersR_game"
+        tools:text="A B C D E F G H I J K L M N O P Q R S T U V W X Y Z" />
+
+    <TextView
+        android:id="@+id/textView_lettersused_game"
+        android:layout_width="169dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/rectangle_border"
+        android:gravity="center
+"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_lettersU_game"
+        tools:text="E B D" />
+
+    <Button
+        android:id="@+id/button_score_game"
+        android:layout_width="77dp"
+        android:layout_height="94dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="14dp"
+        android:background="@color/background"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView_display_game"
+        app:layout_constraintHorizontal_bias="0.608"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_triesleft_game"
+        tools:text="1" />
+
+    <TextView
+        android:id="@+id/textView_triesleft_game"
+        android:layout_width="77dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="14dp"
+        android:background="@drawable/rectangle_border"
+        android:gravity="center"
+        android:text="Tries Left"
+        android:textColor="@color/darkText"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView_display_game"
+        app:layout_constraintHorizontal_bias="0.608"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Tries Left" />
+
+    <TextView
+        android:id="@+id/textView_letterscorrect_game"
+        android:layout_width="343dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginEnd="35dp"
+        android:background="@drawable/rectangle_border"
+        android:gravity="center"
+        android:textSize="26dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_display_game"
+        tools:text="_ _ _ _  _ _ _  _" />
+
+    <TextView
+        android:id="@+id/textView_lettersR_game"
+        android:layout_width="141dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/rectangle_border"
+        android:gravity="center"
+        android:text="Letters Remaining"
+        android:textColor="@color/darkText"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/textView_lettersU_game"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_letterscorrect_game" />
+
+    <Button
+        android:id="@+id/button_back_game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:text="Back"
+        android:background="@color/background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

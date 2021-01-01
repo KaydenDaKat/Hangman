@@ -6,13 +6,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class StartingMenu extends AppCompatActivity {
 
     private TextView titleTextView;
     private Button singlePlayerButton, duoButton;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +29,6 @@ public class StartingMenu extends AppCompatActivity {
         titleTextView = findViewById(R.id.textView_title_startmenu);
         singlePlayerButton = findViewById(R.id.button_singleplayer_startmenu);
         duoButton = findViewById(R.id.button_duo_startmenu);
-
     }
 
     public void setListeners()

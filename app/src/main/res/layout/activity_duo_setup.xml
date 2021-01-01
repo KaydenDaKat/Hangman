@@ -7,6 +7,17 @@
     android:background="@color/background"
     tools:context=".DuoSetup">
 
+    <Button
+        android:id="@+id/button_back_duosetup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/colorPrimary"
+        android:text="Back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/textview_title_duosetup"
         android:layout_width="290dp"
@@ -28,7 +39,7 @@
         android:id="@+id/button_start_duosetup"
         android:layout_width="121dp"
         android:layout_height="75dp"
-        android:layout_marginTop="128dp"
+        android:layout_marginTop="113dp"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="sans-serif-condensed"
         android:text="START"
@@ -39,16 +50,16 @@
 
     <EditText
         android:id="@+id/edittext_wordinsert_duosetup"
-        android:layout_width="250dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="100dp"
-        android:background="@color/colorAccent"
-        android:contentDescription="Insert Word"
+        android:layout_width="246dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="93dp"
+        android:layout_marginEnd="83dp"
         android:ems="10"
         android:hint="Insert Word"
+        android:textColorHint="@color/darkText"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textview_title_duosetup" />
 
