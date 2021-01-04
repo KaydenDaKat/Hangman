@@ -48,9 +48,8 @@ public class DuoSetup extends AppCompatActivity {
                 }
                 else
                 {
-                    Toast.makeText(DuoSetup.this, word,Toast.LENGTH_SHORT).show();
-
                     Intent targetIntent = new Intent(DuoSetup.this,Game.class);
+                    targetIntent.putExtra("WORD_NAME", word);
                     startActivity(targetIntent);
                     finish();
                 }
@@ -71,9 +70,16 @@ public class DuoSetup extends AppCompatActivity {
     public String spaceRemover(String s)
     {
         String word = s;
+        word = word.toLowerCase();
+
         while(word.indexOf(" ") == 0)
         {
             word = word.substring(1);
+        }
+
+        while (word.substring(word.length()-1, word.length()).equals(" "))
+        {
+            word.substring(0,word.length()-1);
         }
 
         return word;

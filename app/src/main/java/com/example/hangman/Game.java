@@ -2,11 +2,14 @@ package com.example.hangman;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Game extends AppCompatActivity {
 
@@ -17,12 +20,28 @@ public class Game extends AppCompatActivity {
 
     private TextView triesLeftTitleTextView, lettersRemainingTitleTextView, lettersUsedTitleTextView;
 
+    private String theWord, underlineSequence;
+    private HangmanGame gameClass;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
         wireWidgets();
+        setListeners();
+        getIntentData();
+        setUp();
+
+    }
+
+    public void setUp()
+    {
+        gameClass = new HangmanGame();
+        underlineSequence = gameClass.createInitialUnderlineSequence(theWord);
+        lettersCorrectTextView.setText(underlineSequence);
+        scoreButton.setText(gameClass.getTries() + "");
+        lettersRemainingTextView.setText(gameClass.getLettersRemainingDisplay());
     }
 
     public void wireWidgets()
@@ -44,4 +63,28 @@ public class Game extends AppCompatActivity {
         lettersUsedTitleTextView = findViewById(R.id.textView_lettersU_game);
     }
 
+    public void setListeners()
+    {
+        enterButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent targetIntent = new Intent(Game.this, DuoSetup.class);
+                startActivity(targetIntent);
+                finish();
+            }
+        });
+    }
+
+    public void getIntentData()
+    {
+         theWord = getIntent().getStringExtra("WORD_NAME");
+    }
 }
+
